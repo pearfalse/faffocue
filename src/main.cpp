@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
 	//App.UseVerticalSync(true);
 	
 //	sf::Font fnt;
-	fcmain::font_file = FaffoCue::_impl::resources_location() + "/Laconic Bold.otf"; // @HACK@
+	fcmain::font_file = FaffoCue::_impl::resources_location() + "/AurulentSans-Bold.otf"; // @HACK@
 	app.font().loadFromFile(fcmain::font_file);
 	app.text().add_line("The quick brown fox jumps over the lazy dog. And here's another sentence because the last one wasn't really long enough to test the word wrap thoroughly. But this should be okay.");
 	app.text().add_line("And now, for a limited time only, a second line of text!");

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F407D7C312F06F7F0031ECAA /* Laconic Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F407D7C212F06F7F0031ECAA /* Laconic Bold.otf */; };
 		F40909061828115300844DD6 /* Mac Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40909051828115300844DD6 /* Mac Assets.xcassets */; };
+		F409090A182815B100844DD6 /* Candal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4090909182815B100844DD6 /* Candal.ttf */; };
+		F409090E182816E700844DD6 /* AurulentSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F409090D182816E700844DD6 /* AurulentSans-Bold.otf */; };
 		F45F5B9B12EEE0BD00394677 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45F5B9912EEE0BD00394677 /* MainMenu.xib */; };
 		F46A12AB1826573B009040D1 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12A81826573B009040D1 /* sfml-graphics.framework */; };
 		F46A12AC1826573B009040D1 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12A91826573B009040D1 /* sfml-system.framework */; };
@@ -53,9 +54,10 @@
 /* Begin PBXFileReference section */
 		A01FB6A90F07CF6E000AAC7B /* FaffoCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaffoCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01FB6AC0F07CF6E000AAC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F407D7C212F06F7F0031ECAA /* Laconic Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Laconic Bold.otf"; path = "Fonts/Laconic Bold.otf"; sourceTree = SOURCE_ROOT; };
 		F407D82F12F1B0190031ECAA /* FontList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FontList.hpp; path = src/FontList.hpp; sourceTree = "<group>"; };
 		F40909051828115300844DD6 /* Mac Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Mac Assets.xcassets"; sourceTree = "<group>"; };
+		F4090909182815B100844DD6 /* Candal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Candal.ttf; path = Fonts/candal/Candal.ttf; sourceTree = "<group>"; };
+		F409090D182816E700844DD6 /* AurulentSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AurulentSans-Bold.otf"; path = "Fonts/Aurulent-Sans/AurulentSans-Bold.otf"; sourceTree = "<group>"; };
 		F45F5B9A12EEE0BD00394677 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F46A12A81826573B009040D1 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../3rdparty/sfml2/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
 		F46A12A91826573B009040D1 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../3rdparty/sfml2/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
@@ -150,7 +152,8 @@
 		F45F5BA412EEF27200394677 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				F407D7C212F06F7F0031ECAA /* Laconic Bold.otf */,
+				F409090D182816E700844DD6 /* AurulentSans-Bold.otf */,
+				F4090909182815B100844DD6 /* Candal.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -208,9 +211,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F409090A182815B100844DD6 /* Candal.ttf in Resources */,
 				F45F5B9B12EEE0BD00394677 /* MainMenu.xib in Resources */,
-				F407D7C312F06F7F0031ECAA /* Laconic Bold.otf in Resources */,
 				F40909061828115300844DD6 /* Mac Assets.xcassets in Resources */,
+				F409090E182816E700844DD6 /* AurulentSans-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
