@@ -75,7 +75,7 @@ namespace FaffoCue {
 	
 	class App {
 	public:
-		App(sf::VideoMode, bool, bool);
+		App(sf::VideoMode, bool, bool, float);
 		
 		typedef App_Impl::ScrollProxy Scroll;
 		
@@ -100,7 +100,7 @@ namespace FaffoCue {
 		void main();
 		
 		static const std::string Title;
-		static const float MaxTextSize, MinTextSize;
+		static const float MaxTextSize, MinTextSize, LineSpacingGradation;
 		
 		// FaffoCue script states
 		//bool set_inverted(bool = true);

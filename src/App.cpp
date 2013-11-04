@@ -16,18 +16,19 @@
 #include <SFML/Window/ContextSettings.hpp>
 
 #include <stdio.h>
+#include <algorithm>
 
 namespace FaffoCue {
     
-    const float App::MaxTextSize = 112.f, App::MinTextSize = 24.f;
+    const float App::MaxTextSize = 112.f, App::MinTextSize = 24.f, App::LineSpacingGradation = 0.05f;
 	
-	App::App(sf::VideoMode vm, bool fs, bool inv)
+	App::App(sf::VideoMode vm, bool fs, bool inv, float textSize)
 	: m_cx(vm, App::Title,
 		   fs ? sf::Style::Fullscreen : sf::Style::Resize|sf::Style::Close,
 		   sf::ContextSettings(24, 8, 2)
 		   )
 	, m_font()
-	, m_text(m_cx, m_font, App::MaxTextSize, inv)
+	, m_text(m_cx, m_font, std::max(textSize, App::MinTextSize), inv)
 	
 	, m_fullscreen(fs)
 	, m_invert(inv)
@@ -35,7 +36,7 @@ namespace FaffoCue {
 	, fullscreen(m_fullscreen)
 	, inverted(m_invert)
 	
-	, m_fontsize(App::MaxTextSize), m_fontspeed(0)
+	, m_fontsize(std::max(textSize, App::MinTextSize)), m_fontspeed(0)
 	, m_scroll(*this, App_Impl::ScrollProxy::default_speed, 0, 0) 
 	
 	, m_width(vm.width), m_height(vm.height)
@@ -126,6 +127,14 @@ namespace FaffoCue {
 					case FaffoCue::Keys::SCROLL_NEXTPAGE:
 						m_scroll.current = std::min(m_scroll.current + m_height, m_scroll.max);
 						force_view_redraw = true;
+						break;
+						
+					case FaffoCue::Keys::LINESPACING_DECREASE:
+						m_text.setLineSpacing(m_text.lineSpacing() - App::LineSpacingGradation);
+						break;
+						
+					case FaffoCue::Keys::LINESPACING_INCREASE:
+						m_text.setLineSpacing(m_text.lineSpacing() + App::LineSpacingGradation);
 						break;
 						
 						

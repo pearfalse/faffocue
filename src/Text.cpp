@@ -106,6 +106,8 @@ namespace FaffoCue
 	, m_font(f)
 	, m_size(size)
 	, m_invert(invert)
+	, m_spaceSize(m_size, m_size)
+	, m_lineSpacing(1.0f)
 	{ }
 	
 	Text& Text::add_line(const std::string& s)
@@ -131,7 +133,7 @@ namespace FaffoCue
         for (std::list<Line>::iterator iter = m_lines.begin(), iend = m_lines.end(); iter != iend; ++iter)
         {
 			iter->m_wrapped.setPosition(0, hCurrent);
-			hCurrent += iter->m_wrapped.getLocalBounds().height + m_font.getLineSpacing(m_size);
+			hCurrent += iter->m_wrapped.getLocalBounds().height + (m_font.getLineSpacing(m_size) * m_lineSpacing);
 		}
 	}
 	
@@ -166,6 +168,18 @@ namespace FaffoCue
 			r += iter->m_wrapped.getLocalBounds().height;
 		}
 		return r;
+	}
+	
+	float Text::lineSpacing() const
+	{
+		return m_lineSpacing;
+	}
+	
+	void Text::setLineSpacing(float spacing)
+	{
+		if (spacing <= 0) return;
+		m_lineSpacing = spacing;
+		this->_reflow();
 	}
 			
 	

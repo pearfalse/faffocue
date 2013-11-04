@@ -75,6 +75,8 @@ namespace FaffoCue
 		void rerenderWords();
 		
 		float height() const;
+		float lineSpacing() const;
+		void setLineSpacing(float);
 		
 		private:
 		void _reflow();
@@ -86,6 +88,7 @@ namespace FaffoCue
 		bool m_invert;
 		
 		sf::Vector2f m_spaceSize;
+		float m_lineSpacing;
 		
 		std::list<Line> m_lines;
 	};

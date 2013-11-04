@@ -102,13 +102,13 @@ int main(int argc, char *argv[])
 	//fcmain::parse_cmdline(argc, argv);
 	// @HACK@
 	fcmain::resWidth = 800; fcmain::resHeight = 600;
-	fcmain::font_size = 24.f;
+	fcmain::font_size = 14.f;
 	fcmain::fullscreen = false;
 	
 	
     //sf::RenderWindow App(sf::VideoMode(640, 480), "FaffoCue");
 	
-	FaffoCue::App app(sf::VideoMode(fcmain::resWidth, fcmain::resHeight), false, false);
+	FaffoCue::App app(sf::VideoMode(fcmain::resWidth, fcmain::resHeight), false, false, fcmain::font_size);
 	
 	//App.SetFramerateLimit(60);
 	//App.UseVerticalSync(true);

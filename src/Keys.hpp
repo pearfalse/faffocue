@@ -30,6 +30,8 @@ namespace FaffoCue
 		SCROLL_BOTTOM = sf::Keyboard::End,
 		SCROLL_PREVPAGE = sf::Keyboard::PageUp,
 		SCROLL_NEXTPAGE = sf::Keyboard::PageDown,
+		LINESPACING_INCREASE = sf::Keyboard::Period,
+		LINESPACING_DECREASE = sf::Keyboard::Comma,
 #if defined(__APPLE__) or defined(MACOSX)
 		_MOD1[2] = { sf::Keyboard::LSystem, sf::Keyboard::RSystem },
 #else
