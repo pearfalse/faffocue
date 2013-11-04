@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F407D7C312F06F7F0031ECAA /* Laconic Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F407D7C212F06F7F0031ECAA /* Laconic Bold.otf */; };
+		F40909061828115300844DD6 /* Mac Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40909051828115300844DD6 /* Mac Assets.xcassets */; };
+		F45F5B9B12EEE0BD00394677 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45F5B9912EEE0BD00394677 /* MainMenu.xib */; };
+		F46A12AB1826573B009040D1 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12A81826573B009040D1 /* sfml-graphics.framework */; };
+		F46A12AC1826573B009040D1 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12A91826573B009040D1 /* sfml-system.framework */; };
+		F46A12AD1826573B009040D1 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12AA1826573B009040D1 /* sfml-window.framework */; };
+		F46A12B1182657A0009040D1 /* freetype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12B0182657A0009040D1 /* freetype.framework */; };
+		F46A12B218265961009040D1 /* freetype.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12B0182657A0009040D1 /* freetype.framework */; };
+		F46A12B318265961009040D1 /* sfml-graphics.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12A81826573B009040D1 /* sfml-graphics.framework */; };
+		F46A12B418265961009040D1 /* sfml-system.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12A91826573B009040D1 /* sfml-system.framework */; };
+		F46A12B518265961009040D1 /* sfml-window.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F46A12AA1826573B009040D1 /* sfml-window.framework */; };
+		F487964C117DBE5F004B92F5 /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F487964A117DBE5F004B92F5 /* Text.cpp */; };
+		F48799E9117E61CC004B92F5 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F48799E8117E61CC004B92F5 /* App.cpp */; };
+		F4967EC117FED9C700D84CB0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4967EC017FED9C700D84CB0 /* main.cpp */; };
+		F4BCB8251186F39A006D659C /* Resources_OSX.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4BCB8241186F39A006D659C /* Resources_OSX.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0072AF00F1D0EDD00B4A594 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F46A12B218265961009040D1 /* freetype.framework in Copy Frameworks */,
+				F46A12B318265961009040D1 /* sfml-graphics.framework in Copy Frameworks */,
+				F46A12B418265961009040D1 /* sfml-system.framework in Copy Frameworks */,
+				F46A12B518265961009040D1 /* sfml-window.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4DB1DC917FF0C21007FF910 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A01FB6A90F07CF6E000AAC7B /* FaffoCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaffoCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01FB6AC0F07CF6E000AAC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F407D7C212F06F7F0031ECAA /* Laconic Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Laconic Bold.otf"; path = "Fonts/Laconic Bold.otf"; sourceTree = SOURCE_ROOT; };
+		F407D82F12F1B0190031ECAA /* FontList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FontList.hpp; path = src/FontList.hpp; sourceTree = "<group>"; };
+		F40909051828115300844DD6 /* Mac Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Mac Assets.xcassets"; sourceTree = "<group>"; };
+		F45F5B9A12EEE0BD00394677 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F46A12A81826573B009040D1 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../3rdparty/sfml2/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		F46A12A91826573B009040D1 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../3rdparty/sfml2/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		F46A12AA1826573B009040D1 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../3rdparty/sfml2/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		F46A12AE1826574A009040D1 /* TCLAP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCLAP.framework; path = ../3rdparty/TCLAP/build/Release/TCLAP.framework; sourceTree = "<group>"; };
+		F46A12B0182657A0009040D1 /* freetype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = freetype.framework; path = "../3rdparty/sfml2/extlibs/libs-osx/Frameworks/freetype.framework"; sourceTree = "<group>"; };
+		F4879649117DBE5F004B92F5 /* Support.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Support.hpp; path = src/Support.hpp; sourceTree = "<group>"; };
+		F487964A117DBE5F004B92F5 /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Text.cpp; path = src/Text.cpp; sourceTree = "<group>"; };
+		F487964B117DBE5F004B92F5 /* Text.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Text.hpp; path = src/Text.hpp; sourceTree = "<group>"; };
+		F48796F9117DEFE4004B92F5 /* Keys.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Keys.hpp; path = src/Keys.hpp; sourceTree = "<group>"; };
+		F487979E117E3DAB004B92F5 /* App.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = App.hpp; path = src/App.hpp; sourceTree = "<group>"; };
+		F48799E8117E61CC004B92F5 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = App.cpp; path = src/App.cpp; sourceTree = "<group>"; };
+		F4967EC017FED9C700D84CB0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		F4BCB8241186F39A006D659C /* Resources_OSX.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Resources_OSX.mm; path = src/Resources_OSX.mm; sourceTree = "<group>"; };
+		F4BCB8261186F801006D659C /* Resources.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Resources.hpp; path = src/Resources.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A01FB6A70F07CF6E000AAC7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46A12AB1826573B009040D1 /* sfml-graphics.framework in Frameworks */,
+				F46A12B1182657A0009040D1 /* freetype.framework in Frameworks */,
+				F46A12AC1826573B009040D1 /* sfml-system.framework in Frameworks */,
+				F46A12AD1826573B009040D1 /* sfml-window.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A01FB69A0F07CF63000AAC7B = {
+			isa = PBXGroup;
+			children = (
+				F45F5BA412EEF27200394677 /* Fonts */,
+				A01FB6B20F07CF80000AAC7B /* Sources */,
+				A01FB6B10F07CF7C000AAC7B /* Resources */,
+				A01FB6B00F07CF75000AAC7B /* Frameworks */,
+				A01FB6AA0F07CF6E000AAC7B /* Products */,
+				F45F5B9912EEE0BD00394677 /* MainMenu.xib */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		A01FB6AA0F07CF6E000AAC7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A01FB6A90F07CF6E000AAC7B /* FaffoCue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A01FB6B00F07CF75000AAC7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F46A12B0182657A0009040D1 /* freetype.framework */,
+				F46A12AE1826574A009040D1 /* TCLAP.framework */,
+				F46A12A81826573B009040D1 /* sfml-graphics.framework */,
+				F46A12A91826573B009040D1 /* sfml-system.framework */,
+				F46A12AA1826573B009040D1 /* sfml-window.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A01FB6B10F07CF7C000AAC7B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A01FB6AC0F07CF6E000AAC7B /* Info.plist */,
+				F40909051828115300844DD6 /* Mac Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A01FB6B20F07CF80000AAC7B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F4967EC017FED9C700D84CB0 /* main.cpp */,
+				F407D82F12F1B0190031ECAA /* FontList.hpp */,
+				F4BCB8261186F801006D659C /* Resources.hpp */,
+				F4BCB8241186F39A006D659C /* Resources_OSX.mm */,
+				F48799E8117E61CC004B92F5 /* App.cpp */,
+				F487979E117E3DAB004B92F5 /* App.hpp */,
+				F48796F9117DEFE4004B92F5 /* Keys.hpp */,
+				F4879649117DBE5F004B92F5 /* Support.hpp */,
+				F487964A117DBE5F004B92F5 /* Text.cpp */,
+				F487964B117DBE5F004B92F5 /* Text.hpp */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		F45F5BA412EEF27200394677 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F407D7C212F06F7F0031ECAA /* Laconic Bold.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A01FB6A80F07CF6E000AAC7B /* FaffoCue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01FB6AF0F07CF6F000AAC7B /* Build configuration list for PBXNativeTarget "FaffoCue" */;
+			buildPhases = (
+				A01FB6A50F07CF6E000AAC7B /* Resources */,
+				F4DB1DC917FF0C21007FF910 /* CopyFiles */,
+				A01FB6A60F07CF6E000AAC7B /* Sources */,
+				A01FB6A70F07CF6E000AAC7B /* Frameworks */,
+				A0072AF00F1D0EDD00B4A594 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaffoCue;
+			productName = FaffoCue;
+			productReference = A01FB6A90F07CF6E000AAC7B /* FaffoCue.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A01FB69C0F07CF63000AAC7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Northegg;
+			};
+			buildConfigurationList = A01FB69F0F07CF63000AAC7B /* Build configuration list for PBXProject "FaffoCue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A01FB69A0F07CF63000AAC7B;
+			productRefGroup = A01FB6AA0F07CF6E000AAC7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A01FB6A80F07CF6E000AAC7B /* FaffoCue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A01FB6A50F07CF6E000AAC7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45F5B9B12EEE0BD00394677 /* MainMenu.xib in Resources */,
+				F407D7C312F06F7F0031ECAA /* Laconic Bold.otf in Resources */,
+				F40909061828115300844DD6 /* Mac Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A01FB6A60F07CF6E000AAC7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F487964C117DBE5F004B92F5 /* Text.cpp in Sources */,
+				F48799E9117E61CC004B92F5 /* App.cpp in Sources */,
+				F4BCB8251186F39A006D659C /* Resources_OSX.mm in Sources */,
+				F4967EC117FED9C700D84CB0 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F45F5B9912EEE0BD00394677 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F45F5B9A12EEE0BD00394677 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A01FB69D0F07CF63000AAC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = FCLIB_DEBUG_ON;
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../3rdparty/sfml2/include,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+			};
+			name = Debug;
+		};
+		A01FB69E0F07CF63000AAC7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../3rdparty/sfml2/include,
+				);
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+			};
+			name = Release;
+		};
+		A01FB6AD0F07CF6F000AAC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Volumes/Crunchy/World/Development/3rdparty/TCLAP/build/Release,
+					/Volumes/Crunchy/World/Development/3rdparty/sfml2/Frameworks,
+					"/Volumes/Crunchy/World/Development/3rdparty/sfml2/extlibs/libs-osx/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PREBINDING = NO;
+				PRODUCT_NAME = FaffoCue;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		A01FB6AE0F07CF6F000AAC7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					/Users/simon/Development/3rdparty/sfml2,
+					/Users/simon/Development/3rdparty/TCLAP/build/Release,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"/Users/simon/Development/3rdparty/sfml2/extlibs/libs-osx/Frameworks",
+					/Users/simon/Development/3rdparty/sfml2/Frameworks,
+					/Volumes/Crunchy/World/Development/3rdparty/TCLAP/build/Release,
+					/Volumes/Crunchy/World/Development/3rdparty/sfml2/Frameworks,
+					"/Volumes/Crunchy/World/Development/3rdparty/sfml2/extlibs/libs-osx/Frameworks",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PREBINDING = NO;
+				PRODUCT_NAME = FaffoCue;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A01FB69F0F07CF63000AAC7B /* Build configuration list for PBXProject "FaffoCue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01FB69D0F07CF63000AAC7B /* Debug */,
+				A01FB69E0F07CF63000AAC7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01FB6AF0F07CF6F000AAC7B /* Build configuration list for PBXNativeTarget "FaffoCue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01FB6AD0F07CF6F000AAC7B /* Debug */,
+				A01FB6AE0F07CF6F000AAC7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A01FB69C0F07CF63000AAC7B /* Project object */;
+}
