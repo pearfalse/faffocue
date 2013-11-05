@@ -28,6 +28,7 @@ namespace FaffoCue
 	, m_bounds(0.f, 0.f, 0.f, 0.f)
 	, m_globalY(initialY)
 	{
+		//FCLIB_DEBUG( fprintf(stderr, "initialY = %.2f\n", initialY); )
 		this->_rewrap(initialY);
 	}
 
@@ -54,8 +55,7 @@ namespace FaffoCue
 		// 2) re-assemble the words into a line, watching out for the need to force wrap
 		
 		// Prereq: get the size of a space.
-		sf::Vector2f spaceSize = sf::Text("\x20\n", m_text.m_font, m_text.m_size).findCharacterPos(2);
-		this->m_text.m_spaceSize = spaceSize;
+		sf::Vector2f spaceSize = m_text.m_spaceSize;
 		//FCLIB_DEBUG( fprintf(stderr, "spaceSize: %.2f,%.2f", spaceSize.x, spaceSize.y); )
 		this->m_globalY = initialY;
 		
@@ -84,8 +84,7 @@ namespace FaffoCue
 		sf::Vector2f runningPosition = sf::Vector2f(0.f, initialY);
 		
         for (std::list<std::string>::const_iterator iter = splitWords.begin(), iend = splitWords.end(); iter != iend; ++iter) {
-			sf::FloatRect fr = sf::Text(dst + ' ' + *iter, m_text.m_font, m_text.m_size).getLocalBounds();
-			float wThis = fr.width + spaceSize.x;
+			float wThis = sf::Text(dst + ' ' + *iter, m_text.m_font, m_text.m_size).getLocalBounds().width;
 			if (wCurrent > 0 && wThis > wWindow /* some words will always be too long! */) {
 				// no room! create a new line first
 				m_wrappedLines.push_back(sf::Text(dst, this->m_text.m_font, this->m_text.m_size));
@@ -122,7 +121,7 @@ namespace FaffoCue
 		}
 	}
 	
-	float _TextLine::_bottom() const
+	inline float _TextLine::_bottom() const
 	{
 		return m_bounds.top + m_bounds.height + (m_text.m_spaceSize.y * m_text.m_lineSpacing);
 	}
@@ -138,7 +137,9 @@ namespace FaffoCue
 	, m_invert(invert)
 	, m_spaceSize(m_size, m_size)
 	, m_lineSpacing(1.0f)
-	{ }
+	{
+		_setSpaceSize();
+	}
 	
 	Text& Text::add_line(const std::string& s)
 	{
@@ -151,8 +152,8 @@ namespace FaffoCue
 		
 		float start = 0.f;
 		if (!m_lines.empty()) {
-			//sf::FloatRect &fr = m_lines.back().m_bounds;
 			start = m_lines.back()._bottom();
+			FCLIB_DEBUG( fprintf(stderr, "Line exists; set initialY to %.2f", start); )
 		}
 		m_lines.push_back(Line(*this, s_copy, start));
 		
@@ -173,6 +174,7 @@ namespace FaffoCue
 	void Text::set_size(float sz)
 	{
 		m_size = sz;
+		_setSpaceSize();
 		update_all();
 	}
 	
@@ -201,6 +203,11 @@ namespace FaffoCue
 		if (spacing <= 0) return;
 		m_lineSpacing = spacing;
 		this->update_all();
+	}
+	
+	void Text::_setSpaceSize()
+	{
+		m_spaceSize = sf::Text("\x20\nTHIS IS THE BIGGEST THING YOU HAVE EVER SEEN IN YOUR LIFE", m_font, m_size).findCharacterPos(2);
 	}
 			
 	

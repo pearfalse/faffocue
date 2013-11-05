@@ -75,7 +75,7 @@ namespace FaffoCue {
 	
 	class App {
 	public:
-		App(sf::VideoMode, bool, bool, float);
+		App(sf::VideoMode, bool, bool, sf::Font&, float);
 		
 		typedef App_Impl::ScrollProxy Scroll;
 		
@@ -86,7 +86,6 @@ namespace FaffoCue {
 		Text& text();
 		const Text& text() const;
 		
-		sf::Font& font();
 		const sf::Font& font() const;
 		
 		sf::RenderWindow& cx();
@@ -132,7 +131,6 @@ namespace FaffoCue {
 	inline       Text& App::text()       { return m_text; }
 	inline const Text& App::text() const { return m_text; }
 	
-	inline       sf::Font& App::font()       { return m_font; }
 	inline const sf::Font& App::font() const { return m_font; }
 	
 	inline       sf::RenderWindow& App::cx()       { return m_cx; }

@@ -84,17 +84,19 @@ namespace FaffoCue
 		
 		private:
 		void _resplit();
+		void _setSpaceSize();
 		
 		sf::RenderWindow& m_window;
 		const sf::Font &m_font;
 		float m_size;
 		bool m_invert;
 		
-		sf::Vector2f m_spaceSize;
+		sf::Vector2f m_spaceSize; /// Size of a single space; used to calculate line spacing.
 		float m_lineSpacing;
 		
 		std::list<Line> m_lines;
 	};
+
 };
 
 #endif // _FCLIB_TEXT_HPP

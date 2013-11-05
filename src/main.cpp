@@ -108,14 +108,16 @@ int main(int argc, char *argv[])
 	
     //sf::RenderWindow App(sf::VideoMode(640, 480), "FaffoCue");
 	
-	FaffoCue::App app(sf::VideoMode(fcmain::resWidth, fcmain::resHeight), false, false, fcmain::font_size);
+	fcmain::font_file = FaffoCue::_impl::resources_location() + "/AurulentSans-Bold.otf"; // @HACK@
+	sf::Font font;
+	font.loadFromFile(fcmain::font_file);
+	
+	FaffoCue::App app(sf::VideoMode(fcmain::resWidth, fcmain::resHeight), false, false, font, fcmain::font_size);
 	
 	//App.SetFramerateLimit(60);
 	//App.UseVerticalSync(true);
 	
 //	sf::Font fnt;
-	fcmain::font_file = FaffoCue::_impl::resources_location() + "/AurulentSans-Bold.otf"; // @HACK@
-	app.font().loadFromFile(fcmain::font_file);
 	app.text().add_line("The quick brown fox jumps over the lazy dog. And here's another sentence because the last one wasn't really long enough to test the word wrap thoroughly. But this should be okay.");
 	app.text().add_line("And now, for a limited time only, a second line of text!");
 	app.text().add_line("0 1 2 3 4 5 6 7 8 9");

@@ -22,13 +22,13 @@ namespace FaffoCue {
     
     const float App::MaxTextSize = 112.f, App::MinTextSize = 24.f, App::LineSpacingGradation = 0.05f;
 	
-	App::App(sf::VideoMode vm, bool fs, bool inv, float textSize)
+	App::App(sf::VideoMode vm, bool fs, bool inv, sf::Font& font, float textSize)
 	: m_cx(vm, App::Title,
 		   fs ? sf::Style::Fullscreen : sf::Style::Resize|sf::Style::Close,
 		   sf::ContextSettings(24, 8, 2)
 		   )
-	, m_font()
-	, m_text(m_cx, m_font, std::max(textSize, App::MinTextSize), inv)
+	, m_font(font)
+	, m_text(m_cx, font, std::max(textSize, App::MinTextSize), inv)
 	
 	, m_fullscreen(fs)
 	, m_invert(inv)
