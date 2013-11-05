@@ -31,7 +31,7 @@ namespace FaffoCue
 	{
 		
 		public:
-		_TextLine(Text&, const std::string&);
+		_TextLine(Text&, const std::string&, float);
 		
 		_TextLine& operator=(const std::string&);
 		
@@ -41,11 +41,15 @@ namespace FaffoCue
 		private:
 		
 		friend class Text;
+		void _rewrap(float);
+		void _drawTo(sf::RenderWindow&);
+		float _bottom() const;
 		
-		void _rewrap();
 		Text &m_text;
 		std::string m_original;
-        sf::Text m_wrapped;
+		std::list<sf::Text> m_wrappedLines;
+		sf::FloatRect m_bounds;
+		float m_globalY;
 		
 	};
 	
@@ -79,7 +83,6 @@ namespace FaffoCue
 		void setLineSpacing(float);
 		
 		private:
-		void _reflow();
 		void _resplit();
 		
 		sf::RenderWindow& m_window;
