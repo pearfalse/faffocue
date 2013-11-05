@@ -118,6 +118,7 @@ int main(int argc, char *argv[])
 	app.font().loadFromFile(fcmain::font_file);
 	app.text().add_line("The quick brown fox jumps over the lazy dog. And here's another sentence because the last one wasn't really long enough to test the word wrap thoroughly. But this should be okay.");
 	app.text().add_line("And now, for a limited time only, a second line of text!");
+	app.text().add_line("0 1 2 3 4 5 6 7 8 9");
 	
 //	sf::View  &cxView  = app.cx().GetDefaultView();
 //	const sf::Input &cxInput = app.cx().GetInput();
